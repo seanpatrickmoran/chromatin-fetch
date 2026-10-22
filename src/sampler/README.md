@@ -1,4 +1,4 @@
-# Coordinate proposals for HCW patch extraction
+# Coordinate proposals for Cfetch patch extraction
 
 Generate cis, upper-triangle candidate anchor pairs from chromosome regions. Outputs are coordinate proposals.
 
