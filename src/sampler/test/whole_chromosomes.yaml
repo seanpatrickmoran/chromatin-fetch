@@ -1,0 +1,3 @@
+assembly: hg38
+chromosomes: [chr1, chr2]
+# Omit coordinates to use each chromosome's full length.

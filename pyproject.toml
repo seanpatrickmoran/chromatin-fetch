@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chromatinfetch"
+version = "0.1.0"
+description = "Chromatin-Fetch representation model and reference-guided inference"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "safetensors>=0.4",
+  "torch>=2.1",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.4"]
+
+[project.scripts]
+hcw-infer = "cfetch.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/cfetch/configs/paper" = [
+  "configs/paper/conformal.json",
+  "configs/paper/graph.json",
+  "configs/paper/probe.json",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,4 @@
+assembly: hg38
+chromosomes: [chr6]
+coordinates:
+  - [0, 7100000]
