@@ -32,7 +32,33 @@ vae_650m/
 
 The same code loads both model sizes; the architecture is defined by the model
 folder's `config.json`. Pickled PyTorch checkpoints will not run. 
-untime.
+
+
+Copies of the models can be found on huggingface under:
+
+[https://huggingface.co/signaldetectionweary/chromatin-fetch-650M](https://huggingface.co/signaldetectionweary/chromatin-fetch-650M)
+
+[https://huggingface.co/signaldetectionweary/chromatin-fetch-135M](https://huggingface.co/signaldetectionweary/chromatin-fetch-135M)
+
+
+## Reference Sets
+
+
+**The annotated Reference** Sets used in our paper for Negatives, Polycomb, and Loop classes may be found here:
+
+[https://huggingface.co/datasets/signaldetectionweary/cfetch-annotations](https://huggingface.co/datasets/signaldetectionweary/cfetch-annotations)
+
+
+
+Users may wish to prepare their own reference sets. To do so, generate a set of coordinates bedpe coordinates using a feature calling tool or by using our patch sampling program provided [here](https://github.com/seanpatrickmoran/hic-world-test/tree/main/src/sampler) and prepare them for visual annotation our simple patch preparation tool, rustrainer:
+
+[https://github.com/seanpatrickmoran/rustrainer](https://github.com/seanpatrickmoran/rustrainer)
+
+
+
+Then, a visualization tool can be used to mark the coordinates with a certain label. We provide a simplistic one here:
+
+[https://github.com/seanpatrickmoran/ViTC-Annotator](https://github.com/seanpatrickmoran/ViTC-Annotator)
 
 ## Inference
 
